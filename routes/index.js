@@ -14,7 +14,7 @@ exports.index = function(req, res) {
 exports.create = function(req, res) {
   new TrainingLog({
     username: req.body.username,
-    content: req.body.conent,
+    content: req.body.content,
     trainingDate: req.body.trainingDate
   }).save(function(err, trainingLog, count) {
     res.redirect('/');
