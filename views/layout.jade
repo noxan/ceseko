@@ -2,5 +2,21 @@
 html
   head
     title= title
+    link(rel="stylesheet", href="css/bootstrap.css")
+    style(type="text/css")
+      body { margin-top: 60px; }
   body
-    block content
+    div.container
+      div.navbar.navbar-fixed-top
+        div.navbar-inner
+          div.container
+            button(type="button", data-toggle="collapse", data-target=".nav-collapse").btn.btn-navbar
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a(href="/").brand ceseko
+            div.nav-collapse.collapse
+              ul.nav
+      block content
+      script(type="text/javascript", src="js/jquery-2.0.2.js")
+      script(type="text/javascript", src="js/bootstrap.js")
