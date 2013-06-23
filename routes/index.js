@@ -3,8 +3,10 @@ var TrainingLog = mongoose.model('TrainingLog');
 
 
 exports.index = function(req, res) {
-  res.render('index', {
-    title: 'ceseko'
+  TrainingLog.find(function(err, trainingLogs, count) {
+    res.render('index', {
+      trainingLogs: trainingLogs
+    });
   });
 };
 
