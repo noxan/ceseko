@@ -9,19 +9,20 @@ block content
         td #{trainingLog.trainingDate.toDateString()}
 
 
-  div.modal.hide.fade#modalCreate
-    div.modal-header
-      button(type="button", data-dismiss="modal", aria-hidden="true").close &times;
-      h3 Create training log
-    div.modal-body
-      form(action='/create', method='post')
-        label Username
-        input(type='text', name='username').span4
-        label Training date
-        input(type='date', name='trainingDate').span4
-        label Content
-        textarea(name='content', rows="5").span4
-        div.form-actions
-          input(type='submit', value='Create').btn
+  form(action='/create', method='post')
+    div.modal.hide.fade#modalCreate
+      div.modal-header
+        button(type="button", data-dismiss="modal", aria-hidden="true").close &times;
+        h3 Create training log
+      div.modal-body
+          label Username
+          input(type='text', name='username').span4
+          label Training date
+          input(type='date', name='trainingDate').span4
+          label Content
+          textarea(name='content', rows="5").span4
+      div.modal-footer
+        input(type="button", data-dismiss="modal", aria-hidden="true", value="Close").btn
+        input(type="submit", value="Save changes").btn.btn-primary
 
   a(href="#modalCreate", role="button", data-toggle="modal").btn Create training log
