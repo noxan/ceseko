@@ -5,6 +5,7 @@ var TrainingLog = mongoose.model('TrainingLog');
 exports.index = function(req, res) {
   TrainingLog.find(function(err, trainingLogs, count) {
     res.render('index', {
+      title: 'ceseko',
       trainingLogs: trainingLogs
     });
   });
