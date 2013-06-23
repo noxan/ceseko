@@ -21,6 +21,11 @@ app.configure('development', function() {
   app.use(express.errorHandler());
 });
 
+// routes
+var routes = require('./routes');
+app.get('/', routes.index);
+
+// server
 http.createServer(app).listen(app.get('port'), function() {
   console.log("App running on port " + app.get('port'));
 });
