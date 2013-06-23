@@ -28,6 +28,7 @@ app.configure('development', function() {
 // routes
 var routes = require('./routes');
 app.get('/', routes.index);
+app.post('/create', routes.create);
 
 // server
 http.createServer(app).listen(app.get('port'), function() {
