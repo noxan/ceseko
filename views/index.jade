@@ -1,6 +1,14 @@
 extends layout
 
 block content
+  table.table
+    tr
+      th Date
+    each trainingLog in trainingLogs
+      tr
+        td #{trainingLog.trainingDate.toDateString()}
+
+
   div.modal.hide.fade#modalCreate
     div.modal-header
       button(type="button", data-dismiss="modal", aria-hidden="true").close &times;
