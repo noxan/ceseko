@@ -4,9 +4,11 @@ block content
   table.table
     tr
       th Date
+      th Content
     each trainingLog in trainingLogs
       tr
         td #{trainingLog.trainingDate.toDateString()}
+        td #{trainingLog.content}
 
 
   form(action='/create', method='post')
